@@ -23,7 +23,7 @@ SHELL := sh -e
 
 SCRIPTS = "debian/preinst install" "debian/postinst configure" "debian/prerm remove" "debian/postrm remove"
 
-all: clean test build install
+all: build
 
 test:
 
