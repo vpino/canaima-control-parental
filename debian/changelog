@@ -3,8 +3,9 @@ canaima-control-parental (1.0+2) unstable; urgency=low
   * [59faff1] añadiendo interfaz grafica para poder insertar nuevas url
     porparte de los padres o maestros
   * [857bd6e] corrigiendo error en el Makefile
+  * [958f009] corrigiendo error en el Makefile
 
- -- Carlos Escobar <carlosescobar70@gmail.com>  Mon, 21 Mar 2011 17:43:56 -0430
+ -- Carlos Escobar <carlosescobar70@gmail.com>  Mon, 21 Mar 2011 17:44:34 -0430
 
 canaima-control-parental (1.0+1) unstable; urgency=low
 
