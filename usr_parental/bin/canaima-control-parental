@@ -1,0 +1,5 @@
+#!/bin/bash
+
+cd /usr/share/canaima-control-prental
+mkdir -p ~/.mostrar_canaima-control-prental
+python canaima-control-prental.py

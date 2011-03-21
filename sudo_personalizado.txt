@@ -1,0 +1,1 @@
+canaima  ALL=NOPASSWD: /bin/echo, /bin/cp, /bin/cat, /bin/grep, /usr/bin/cut, /usr/sbin/invoke-rc.d  dansguardian restart, /usr/bin/python, /usr/bin/canaima-control-parental

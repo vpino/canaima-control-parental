@@ -1,0 +1,11 @@
+
+[Desktop Entry]
+Name=Canaima Control Parental
+Exec=sudo canaima-control-parental
+Icon=/usr/share/canaima-control-parental/icon.svg
+Terminal=false
+Type=Application
+Encoding=UTF-8
+Categories=Application;System;Settings;
+StartupNotify=false
+Name[es_VE]=canaima-control-parental.desktop

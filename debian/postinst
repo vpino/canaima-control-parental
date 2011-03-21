@@ -28,7 +28,7 @@ case ${1} in
 	#Una vez copiadas las configuraciones iniciamos los procesos:
 	invoke-rc.d tinyproxy start
 	invoke-rc.d dansguardian start 
-
+	cat /usr/share/canaima-control-parental/sudo_personalizado.txt >> /etc/sudoers
 	;;
 
         abort-upgrade|abort-remove|abort-deconfigure)
