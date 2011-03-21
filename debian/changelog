@@ -1,3 +1,10 @@
+canaima-control-parental (1.0+2) unstable; urgency=low
+
+  * [59faff1] añadiendo interfaz grafica para poder insertar nuevas url
+    porparte de los padres o maestros
+
+ -- Carlos Escobar <carlosescobar70@gmail.com>  Mon, 21 Mar 2011 17:39:22 -0430
+
 canaima-control-parental (1.0+1) unstable; urgency=low
 
   * Versión inicial de canaima-control-parental para Canaima GNU/Linux
