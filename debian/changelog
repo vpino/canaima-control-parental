@@ -1,5 +1,8 @@
 canaima-control-parental (1.0+1) unstable; urgency=low
 
   * Versión inicial de canaima-control-parental para Canaima GNU/Linux
+  * [1678862] remasterizacion paquete canaima-control-parental para
+    cumplir con las politicas del nuevo versionamiento y de lo requerido
+    por el cnti
 
- -- Carlos Escobar <carlosescobar70@gmail.com>  Mon, 21 Mar 2011 14:11:46 -0430
+ -- Carlos Escobar <carlosescobar70@gmail.com>  Mon, 21 Mar 2011 16:10:35 -0430
