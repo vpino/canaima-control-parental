@@ -86,6 +86,9 @@ install:
 	# cp -r scripts/nombre-p.py $(DESTDIR)/usr/share/nombre-p/
 	# cp -r scripts/interfaz.glade $(DESTDIR)/usr/share/nombre-p/
 	# cp -r scripts/canaima-bienvenido.sh $(DESTDIR)/usr/bin/nombre-p
+	mkdir -p $(DESTDIR)/usr/share/canaima-control-parental/
+	cp -r dansguardian $(DESTDIR)/usr/share/canaima-control-parental/
+	cp -r tinyproxy $(DESTDIR)/usr/share/canaima-control-parental/
 
 uninstall:
 

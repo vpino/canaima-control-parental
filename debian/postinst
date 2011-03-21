@@ -21,6 +21,14 @@ case ${1} in
         # Aquí va lo que el paquete debe configurar/crear/borrar después de
         # instalarse. Lenguaje a usar: BASH.
 
+	cat /usr/share/canaima-control-parental/dansguardian/dansguardianf.conf > /etc/dansguardian/dansguardianf.conf
+	cat /usr/share/canaima-control-parental/dansguardian/dansguardianf1.conf > /etc/dansguardian/dansguardianf1.conf
+	cat /usr/share/canaima-control-parental/dansguardian/dansguardian > /etc/init.d/dansguardian
+	cat /usr/share/canaima-control-parental/tinyproxy.conf > /etc/dansguardian/tinyproxy.conf
+	#Una vez copiadas las configuraciones iniciamos los procesos:
+	invoke-rc.d tinyproxy start
+	invoke-rc.d dansguardian start 
+
 	;;
 
         abort-upgrade|abort-remove|abort-deconfigure)

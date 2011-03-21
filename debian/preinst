@@ -20,7 +20,10 @@ case ${1} in
 
 	# Aquí va lo que el paquete debe configurar/crear/borrar antes de
 	# instalarse. Lenguaje a usar: BASH.
+	#Una vez instalado se detienen los procesos:
 
+	invoke-rc.d tinyproxy stop
+	invoke-rc.d dansguardian stop
 	;;
 
         abort-upgrade)
