@@ -1,3 +1,10 @@
+canaima-control-parental (1.0+5) unstable; urgency=low
+
+  * [48aaaf6] corrigiendo error en el canaima-control-parental.py y el
+    /usr/bin/canaima-control-parental
+
+ -- Carlos Escobar <carlosescobar70@gmail.com>  Tue, 22 Mar 2011 11:01:38 -0430
+
 canaima-control-parental (1.0+4) unstable; urgency=low
 
   * [03b1748] corrigiendo error en el postinstall
