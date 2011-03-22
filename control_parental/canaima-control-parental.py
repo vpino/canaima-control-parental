@@ -48,7 +48,7 @@ def open_about(widget):
             dlg.set_license(gpl)
         except Exception, detail:
             print detail        
-        dlg.set_authors(["Autor: Carlos Escobar <carlos@gnu.org.ve>", "Modificado por: Yoel Jerez <yoel.jerez@gmail.com>"])
+        dlg.set_authors(["Autor: Carlos Escobar <carlos@gnu.org.ve>", "Modificado por: Yoel Jerez <yoel.jerez@gmail.com>", "Juan Mejias <algolius@gmail.com>", "Gracias: dansguardian, mintnany, tinyproxy"])
  
 	dlg.set_icon_from_file("/usr/share/canaima-control-parental/icon.svg")
 	dlg.set_logo(gtk.gdk.pixbuf_new_from_file("/usr/share/canaima-control-parental/icon.svg"))
