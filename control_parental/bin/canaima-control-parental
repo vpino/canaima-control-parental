@@ -1,5 +1,5 @@
 #!/bin/bash
 
-cd /usr/share/canaima-control-prental
-mkdir -p ~/.mostrar_canaima-control-prental
-python canaima-control-prental.py
+cd /usr/share/canaima-control-parental
+mkdir -p ~/.mostrar_canaima-control-parental
+python canaima-control-parental.py

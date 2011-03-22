@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# Canaima Control prental 
+# Canaima Control parental 
 #	Carlos Escobar (obi-wan) <cescobar@gnu.org.ve>
 
 try:
@@ -24,19 +24,19 @@ except Exception, detail:
 	pass
 
 #
-gettext.install("canaima-control-prental", "/usr/share/canaima-control-prental/")
+gettext.install("canaima-control-parental", "/usr/share/canaima-control-parental/")
 
 #descripcion del  menu 
 menuName = _("Bloqueador de Dominio")
-menuGenericName = _("Control prental")
+menuGenericName = _("Control parental")
 menuComment = _("Bloquear el acceso a los nombres de dominio seleccionado")
 
 def open_about(widget):
 	dlg = gtk.AboutDialog()
-	dlg.set_title(_("About") + " - canaima-control-prental")
+	dlg.set_title(_("About") + " - canaima-control-parental")
 	version = ("V1.0")
 	dlg.set_version(version)
-	dlg.set_program_name("canaima-control-prental")
+	dlg.set_program_name("canaima-control-parental")
 	dlg.set_comments(_("Bloqueador de Dominio"))
         try:
             h = open('/usr/share/common-licenses/GPL','r')
@@ -50,8 +50,8 @@ def open_about(widget):
             print detail        
         dlg.set_authors(["Autor: Carlos Escobar <carlos@gnu.org.ve>", "Modificado por: Yoel Jerez <yoel.jerez@gmail.com>"])
  
-	dlg.set_icon_from_file("/usr/share/canaima-control-prental/icon.svg")
-	dlg.set_logo(gtk.gdk.pixbuf_new_from_file("/usr/share/canaima-control-prental/icon.svg"))
+	dlg.set_icon_from_file("/usr/share/canaima-control-parental/icon.svg")
+	dlg.set_logo(gtk.gdk.pixbuf_new_from_file("/usr/share/canaima-control-parental/icon.svg"))
         def close(w, res):
             if res == gtk.RESPONSE_CANCEL:
                 w.hide()
@@ -59,7 +59,7 @@ def open_about(widget):
         dlg.show()
 
 def agragar_dns(widget, Bloqueador_dns):
-	name = commands.getoutput("zenity --entry --text=\"" + _("Escriba la Direccion de Internet:") + "\" --title=canaima-control-prental --window-icon=/usr/share/canaima-control-prental/icon.svg 2> /dev/null")
+	name = commands.getoutput("zenity --entry --text=\"" + _("Escriba la Direccion de Internet:") + "\" --title=canaima-control-parental --window-icon=/usr/share/canaima-control-parental/icon.svg 2> /dev/null")
 	domain = name.strip()
 	if domain != '':
 		domain = re.sub('http://w*\.*','',domain, re.IGNORECASE)
@@ -67,7 +67,7 @@ def agragar_dns(widget, Bloqueador_dns):
 			model = Bloqueador_dns.get_model()
 			iter = model.insert_before(None, None)
 			model.set_value(iter, 0, domain)
-			domain = "" + domain + " # Bloqueado por canaima-control-prental"
+			domain = "" + domain + " # Bloqueado por canaima-control-parental"
 			os.system("echo \"" + domain + "\" >> /etc/dansguardian/lists/blacklists/ads/urls")		
 
 def cerrar_app(widget):
@@ -79,12 +79,12 @@ if not os.path.exists("/etc/dansguardian/lists/blacklists/ads/urls.bck"):
 	os.system("cp /etc/dansguardian/lists/blacklists/ads/urls /etc/dansguardian/lists/blacklists/ads/urls.bck")
 
 #Se Establese el archivo de glade
-gladefile = "/usr/share/canaima-control-prental/canaima-control-prental.glade"
+gladefile = "/usr/share/canaima-control-parental/canaima-control-parental.glade"
 wTree = gtk.glade.XML(gladefile, "ventana1")
-wTree.get_widget("ventana1").set_title(_("Canaima Control prental"))
+wTree.get_widget("ventana1").set_title(_("Canaima Control parental"))
 vbox = wTree.get_widget("caja_menu")
 Bloqueador_dns = wTree.get_widget("Bloqueador_dns")
-wTree.get_widget("ventana1").set_icon_from_file("/usr/share/canaima-control-prental/icon.svg")
+wTree.get_widget("ventana1").set_icon_from_file("/usr/share/canaima-control-parental/icon.svg")
 
 # Se establece la vista del arbol por columnas 
 column1 = gtk.TreeViewColumn(_("Direcciones de Internet Bloquedas"), gtk.CellRendererText(), text=0)
@@ -100,7 +100,7 @@ model.set_sort_column_id( 0, gtk.SORT_ASCENDING )
 Bloqueador_dns.set_model(model)
 
 #Se Obtiene la lista de dominios no permitidos
-blocks_domains = commands.getoutput("cat /etc/dansguardian/lists/blacklists/ads/urls | grep canaima-control-prental | cut -d' ' -f1")
+blocks_domains = commands.getoutput("cat /etc/dansguardian/lists/blacklists/ads/urls | grep canaima-control-parental | cut -d' ' -f1")
 for line in blocks_domains.split('\n'):
 	line = line.strip()
 	iter = model.insert_before(None, None)
