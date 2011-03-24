@@ -11,6 +11,7 @@ Standards-Version: 3.9.1
 
 Package: canaima-control-parental
 Architecture: all
-Depends: dansguardian, tinyproxy, ${shlibs:Depends}, ${misc:Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Pre-Depends: dansguardian, tinyproxy
 Description: aplicación creada para el control de contenido que pueda ser perjudicial para nuestros niños.
  Es una aplicación que permite filtar paginas web y evitar que contenidos pornograficos y violentos sean vistos por los mas pequenos y pequenas de la casa.
