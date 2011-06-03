@@ -1,3 +1,9 @@
+canaima-control-parental (1.0+9) unstable; urgency=low
+
+  * [dddab1f] añadiedo al postinst copia de lista de exepciones
+
+ -- Carlos Escobar <carlosescobar70@gmail.com>  Fri, 03 Jun 2011 10:59:40 -0430
+
 canaima-control-parental (1.0+8) unstable; urgency=low
 
   * [2593a14] añadiendo execpcion a lista de sitios en el archivo de
