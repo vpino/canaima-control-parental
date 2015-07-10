@@ -2,4 +2,4 @@
 
 cd /usr/share/canaima-control-parental
 mkdir -p ~/.mostrar_canaima-control-parental
-python canaima-control-parental.py
+python control-parental.py

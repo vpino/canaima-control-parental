@@ -25,6 +25,7 @@ case ${1} in
 	cat /usr/share/canaima-control-parental/dansguardian/dansguardianf1.conf > /etc/dansguardian/dansguardianf1.conf
 	cat /usr/share/canaima-control-parental/dansguardian/dansguardian > /etc/init.d/dansguardian
 	cat /usr/share/canaima-control-parental/tinyproxy/tinyproxy.conf > /etc/tinyproxy.conf
+	cp -Rv /usr/share/canaima-control-parental/template.html /etc/dansguardian/languages/spanish
 	cp -Rv /usr/share/canaima-control-parental/dansguardian/lists/ /etc/dansguardian/
 	#Una vez copiadas las configuraciones iniciamos los procesos:
 	invoke-rc.d tinyproxy start

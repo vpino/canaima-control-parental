@@ -91,12 +91,14 @@ install:
 	mkdir -p $(DESTDIR)/usr/share/applications/
 	cp -r dansguardian $(DESTDIR)/usr/share/canaima-control-parental/
 	cp -r tinyproxy $(DESTDIR)/usr/share/canaima-control-parental/
-	cp -r control_parental/canaima-control-parental.glade $(DESTDIR)/usr/share/canaima-control-parental/
-	cp -r control_parental/canaima-control-parental.py $(DESTDIR)/usr/share/canaima-control-parental/
+	cp -r control_parental/control-parental.py $(DESTDIR)/usr/share/canaima-control-parental/
 	cp -r control_parental/bin/canaima-control-parental $(DESTDIR)/usr/bin/
+	cp -r control_parental/template.html $(DESTDIR)/usr/share/canaima-control-parental
+	cp -r control_parental/imagenes $(DESTDIR)/usr/share/canaima-control-parental
 	cp -r control_parental/applications/canaima-control-parental.desktop $(DESTDIR)/usr/share/applications/
 	cp -r control_parental/icon.svg $(DESTDIR)/usr/share/canaima-control-parental/
 	cp -r sudo_personalizado.txt $(DESTDIR)/usr/share/canaima-control-parental/
+
 uninstall:
 
 # Aquí se deshace lo que se hizo en el install, borrando exactamente lo que
